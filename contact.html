@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="utf-8">
+  <title> Contact </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <style >
+      .textt{
+        width: 500px; ;
+        height: 100px;
+        margin-left:300px; 
+      }
+
+      .message{
+        margin-top:100px; 
+        padding-left:300px; 
+      }
+
+      .col-sm-12{
+        width: 1200px;
+        height: 300px;
+        border: 2px solid #23415c;
+      }
+      .buttonn{
+        margin-top: 40px;
+      }
+
+      h2{
+        padding-right: 60px;
+      }
+
+        .col-sm-12:hover{
+        width: 1200px;
+        height: 300px;
+        border: 10px solid #23415c;
+
+      }
+
+        .map{
+            align-content: center;
+            width: 700px;
+        }
+
+
+        #lower{
+        width: 500px;
+        height: 310px;
+        border: 2px solid #23415c;
+      }
+
+        #lower:hover{
+          width: 500px;
+          height: 310px;
+          border: 10px solid #23415c;
+
+        }
+
+         #lowerr{
+        width: 500px;
+        height: 310px;
+        border: 2px solid #23415c;
+        margin-left: 170px;
+        text-align: center;
+
+      }
+
+        #lowerr:hover{
+          width: 500px;
+          height: 310px;
+         border: 10px solid #23415c;
+         margin-left: 50px;
+
+        }
+
+        .maptext{
+            margin-top: 20px;
+            padding-left: 220px;
+            
+        }
+
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">
+            Toggle bavigation
+          </span>
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/travel.png" alt="">
+        </a>
+      </div>
+
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+
+      	<input class="indexsearch"  type="text" placeholder="Search places...">
+      	<button type="submit"> Submit</button>
+        <ul class=" nav navbar-nav navbar-right">
+
+          <li> <a class="active" href="index.html"> Home </a> </li>
+          <li> <a href="about.html">About </a></li>
+          <li> <a href="services.html">Services </a></li>
+          <li> <a href="getstarted.html">Get Started </a></li>
+          <li> <a href="contact.html">Contact </a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+
+	<div class="sidebar-contact">
+
+		<div class="toggle"></div>
+		<h2> Contact Us</h2>
+		<form>
+			<input  name="name" placeholder="Name">
+			<input  name="email" placeholder="Email">
+			<input name="Phone" placeholder="Phone Number">
+			<textarea placeholder="Message..."></textarea>
+
+			<button  name="send" value="send"> Send </button>
+		</form>
+	 </div>
+
+		<div class="banner">  
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-lg-12">
+            <h2 class="message"> If you have any message for us you can write here</h2>
+            <textarea class="textt" placeholder="Message....">   </textarea>  
+                  <button class="buttonn"  name="send" value="send"> Send </button>
+
+          </div>
+          <h3 class="maptext"> You can check out our adress and contact details  below:</h3>
+          <div class="col-sm-6" id="lower">
+            <p class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.81705969069!2d85.31714151500834!3d27.692048532771167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b19295555f%3A0xabfe5f4b310f97de!2sThe+British+College%2C+Kathmandu!5e0!3m2!1sen!2snp!4v1557061531245!5m2!1sen!2snp" width="400" height="300"  style="border:0" allowfullscreen></iframe></p>
+        </div>
+
+        <div class="col-sm-6" id="lowerr">
+          <h3> Gmail: Ashish.pandey2073@gmail.com</h3>
+          <h3> Address: The British College, Thapathali </h3>
+          <h3> Phone Number: 399192313</h3>
+          
+        </div>
+      </div>
+      
+
+        </div>
+    </div>
+
+	<div class="content">
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.0.js"> </script>
+  <script>
+  	$(document).ready(function(){
+  		$('.toggle').click(function(){
+  			$('.sidebar-contact').toggleClass('active')
+  			$('.toggle').toggleClass('active')
+  		})
+  	})
+  </script>
+
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <h3> Contact Us</h3>
+      <br>
+      <h4> Our address and contact info here </h4>
+    </div>
+
+    <div class="col-sm-6">
+      <h3> Connect </h3>
+      <a href="https://www.facebook.com" class="fa fa-facebook"> </a>
+      <a href="https://www.twitter.com" class="fa fa-twitter"> </a>         
+       <a href="https://www.google.com" class="fa fa-google"> </a>
+       <a href="https://www.linkedin.com" class="fa fa-linkedin"> </a>
+       <a href="https://www.youtube.com" class="fa fa-youtube"> </a>
+
+
+
+    </div>    
+
+
+  </div>
+</footer>
+</body>
+</html>
