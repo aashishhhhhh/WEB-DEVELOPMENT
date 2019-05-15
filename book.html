@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+  <style >
+    
+body{padding-top:50px; margin:0; background:#23415C;}
+    .formm{height:900px; width:100%; background:#79B9E1; margin-top:50px; }
+  .formpara{height:50px; width:100%; background:white; font-size:40px; text-align:center;}  
+
+      form{display:block; background:#CF4B97;; width:60%; padding:50px; margin:0 auto; text-align:center; margin-top:50px; height:500px; padding-right:50px; border:solid 20px blue; }
+
+      form:hover{display:block; background:#fff;; width:60%; padding:50px; margin:0 auto; text-align:center; margin-top:50px; height:500px; padding-right:50px; border:solid 20px red; transition: 1.2s; }
+  h1{display:block; margin:0 auto; width:40%;}
+  .name{font-size:40px; float:left; position:absolute; z-index:999; top:300px; left:500px; }
+  .email{font-size:40px; float:left; position:absolute; z-index:999; top:350px; left:500px; margin-top:10px; }
+  .country{font-size:40px; float:left; position:absolute; z-index:999;  top:445px; left:500px; margin-top:10px;}
+  .mobile{font-size:40px; float:left; position:absolute; z-index:999; top:400px; left:500px; margin-top:10px;}
+    
+  .namei{height:40px; position:absolute; top:300px; width:300px;}
+  .emaili{height:40px; position:absolute; top:350px; margin-top:10px; width:300px;}
+  .mobilei{height:40px; position:absolute; top:400px; margin-top:10px; width:300px;}
+  .countryi{height:40px; position:absolute; top:450px; margin-top:10px; width:300px;}
+  .submitt{height:40px; width:100px; position:absolute; top:500px; margin-top:40px; width:300px; left:570px;}
+
+        
+  </style>
+
+
+<script >
+function validate()
+{
+if(document.myForm.Email.value == "")
+  {
+    document.myForm.Email.focus();
+    alert("Please fill Email");
+    return false;
+  }
+if(document.myForm.username.value == "")
+  {
+    document.myForm.username.focus();   
+    alert("Please fill Name");
+
+    return false;
+  }
+
+if(document.myForm.mobile.value == "")
+  {
+    document.myForm.mobile.focus();   
+    alert("Please fill Mobile number");
+
+    return false;
+  }
+
+if( document.myForm.mobile.value.length != "10")
+  {
+    document.myForm.mobile.focus();   
+    alert("Please fill valid Mobile number");
+
+    return false;
+  } 
+
+if(document.myForm.Email.value != "")
+  {
+    var emailID = document.myForm.Email.value;
+    atpos = emailID.indexOf("@");
+    dotpos = emailID.lastIndexOf(".")
+    if(atpos < 1  || (dotpos - atpos < 2))
+    {
+      alert("Enter a valid email address");
+      document.myForm.Email.focus();
+      return false;
+    }
+  }
+  return true;
+}
+</script>
+
+<title>Booking</title>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">
+            Toggle bavigation
+          </span>
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/travel.png" alt="">
+        </a>
+      </div>
+
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+
+        <input class="indexsearch"  type="text" placeholder="Search places...">
+        <button type="submit"> Submit</button>
+        <ul class=" nav navbar-nav navbar-right">
+
+          <li> <a class="active" href="index.html"> Home </a> </li>
+          <li> <a href="about.html">About </a></li>
+          <li> <a href="services.html">Services </a></li>
+          <li> <a href="getstarted.html">Get Started </a></li>
+          <li> <a href="contact.html">Contact </a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+
+
+<div class="formm">
+
+    <h2 class="formpara"> We will contact  ASAP with more details after you fill up the form </h2>
+
+    <form  name="myForm" onsubmit="return(validate())">
+   <span>
+      <label class="name"> Name: </label>
+      <input class="namei" type="text" name="username"/>
+     <span style="clear:both;"> </span>
+     <br>
+      <label class="email"> Email: </label>
+      <input class="emaili"  name="Email"/>
+     <span style="clear:both;"> </span>
+     <br>
+     <label class="mobile"> Mobile: </label>
+      <input class="mobilei" type="text" name="mobile"/>
+      <br>
+      <label class="country"> Country: </label>
+       <select class="countryi">
+      <option  selected="selected" value="-1"> Select country </option>
+      <option value="1"> Portugal </option>
+      <option value="2"> Brasil </option>
+      <option value="3"> Spain </option>
+      <option value="4"> Nepal </option>
+      <option value="5"> Other </option> 
+      </select>
+      <span style="clear:both;"> </span>
+      <br>
+      <input class="submitt" style="padding-left:20px; text-align:center;" type="submit"/>
+      </span>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <h3> Contact Us</h3>
+      <br>
+      <h4> Our address and contact info here </h4>
+    </div>
+
+    <div class="col-sm-6">
+      <h3> Connect </h3>
+      <a href="http://www.facebook.com" class="fa fa-facebook"> </a>
+      <a href="http://www.twitter.com" class="fa fa-twitter"> </a>         
+       <a href="http://www.google.com" class="fa fa-google"> </a>
+       <a href="http://www.linkedin.com" class="fa fa-linkedin"> </a>
+       <a href="http://www.youtube.com" class="fa fa-youtube"> </a>
+
+
+
+
+    </div>    
+
+
+  </div>
+</footer>
+
+
+</body>
+</html>
